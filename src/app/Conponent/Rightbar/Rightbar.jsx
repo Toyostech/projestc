@@ -14,10 +14,18 @@ import Switch from "./switch/SwitchControl"
 
 
 
+
 const Rightbar = ({mode , setMode}) => {
   return (
     <Box flex={1} p={2}
       sx={{ display: { xs: "none", sm: "block" } }}>
+        <video src="/video/video-2(1).mp4"  style={{
+          objectFit: "cover",
+          width: "100%",
+          height: "100%",
+          position: "fixed",
+          zIndex: -1 
+        }}/>
 
       <Box position="fixed">
         <List>
@@ -39,6 +47,7 @@ const Rightbar = ({mode , setMode}) => {
           <Marketplace />
           <Pages />
           <Profile />
+     
           <Switch mode={mode} setMode= {setMode} />
         </List>
 

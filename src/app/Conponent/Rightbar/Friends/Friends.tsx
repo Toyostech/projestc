@@ -6,6 +6,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import Diversity1Icon from "@mui/icons-material/Diversity1";
+import Link from "next/link";
 
 const Friends = () => {
   return (
@@ -15,7 +16,8 @@ const Friends = () => {
           <ListItemIcon>
             <Diversity1Icon />
           </ListItemIcon>
-          <ListItemText primary="Friends" />
+          <Link href="/Sittings">Setting</Link>
+          {/* <ListItemText primary="Friends" /> */}
         </ListItemButton>
       </ListItem>
     </>

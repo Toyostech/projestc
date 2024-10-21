@@ -10,6 +10,7 @@ import {
   Typography,
   CardContent,
   Avatar,
+  Checkbox,
 } from "@mui/material";
 import {CardMedia} from "@mui/material"
 
@@ -19,17 +20,44 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { CheckBox, FavoriteBorder } from "@mui/icons-material";
 
 const Post = () => {
+ 
   return (
     <Card sx={{ margin: 5}}>
       <CardHeader
+      
+    
         avatar={
-          <Avatar sx={{ background: "red" }} aria-label="recipe ">
+          <Avatar sx={ { background: "red" ,
+            ":hover": {
+              background: "green",
+              color: "red",
+              fontWeight: 900,
+              transition: "ease-out 900ms"
+
+
+            },
+            ":action": {
+              paddingTop: 20
+
+            }
+          }} aria-label="recipe ">
             R
           </Avatar>
         }
         action={
           <IconButton aria-label="setting">
-            <MoreVertIcon />
+            <MoreVertIcon  sx={{
+              ":hover" :{
+                background: "red",
+                transition: "ease-in-out 1000ms",
+                borderRadius: 45,
+                padding: 1.5
+
+              }
+
+            }}
+              
+            />
           </IconButton>
         }
         title="Shrimp and Chorizo paella"
@@ -56,7 +84,7 @@ const Post = () => {
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to  favorite">
-          <CheckBox
+          <Checkbox
             icon={<FavoriteBorder />} checkedIcon={<FavoriteIcon sx={{ color: "red" }}/>}/>
         </IconButton>
         <IconButton>

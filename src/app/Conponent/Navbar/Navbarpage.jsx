@@ -2,9 +2,10 @@
 import React, { useState } from 'react'
 import { InputBase, Avatar } from '@mui/material'
 import SettingsIcon from '@mui/icons-material/settings'
-import Link from 'next/link'
+
 import { AppBar, Toolbar, Typography, styled, Menu, MenuItem } from "@mui/material"
 import { Badge, MailIcon, Notifications } from '@mui/icons-material'
+import Link from 'next/link'
 
 
 const StyledToolbar = styled(Toolbar)({
@@ -13,9 +14,9 @@ const StyledToolbar = styled(Toolbar)({
 });
 
 const Search = styled("div")(({ theme }) => ({
-  backgroundColor: "white",
+  backgroundColor: "red",
   padding: "0 10px",
-  borderRadius: theme.shape.borderRadius,
+  borderRadius: 45,
   width: "40%",
 
 }));
@@ -55,7 +56,9 @@ const navbarpage = () => {
   return (
     <AppBar position='sticky'>
       <StyledToolbar>
-        <Typography variant='h5' sx={{ display: { xs: "none", sm: "block" } }}><Link href= "/"></Link>ww-Dev</Typography>
+        <Typography variant='h5' sx={{ display: { xs: "none", sm: "block" } }} style={{
+          cursor: "pointer"
+        }}><Link href= "/Friends/friends"></Link>ww-Dev</Typography>
         <SettingsIcon sx={{ display: { xs: "block", sm: "none" } }} />
         <Search><InputBase placeholder="search..." /></Search>
 
@@ -108,6 +111,7 @@ const navbarpage = () => {
         }}
 
       >
+        
         <MenuItem>Profile</MenuItem>
         <MenuItem>My account</MenuItem>
         <MenuItem>Logout</MenuItem>

@@ -4,6 +4,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@mui/material";
 import PeopleIcon from "@mui/icons-material/People";
 
@@ -15,6 +16,7 @@ const Profile = () => {
         <ListItemButton component="a">
           <ListItemIcon>
             <PeopleIcon />
+            
           </ListItemIcon>
           <ListItemText primary="Market" />
         </ListItemButton>
